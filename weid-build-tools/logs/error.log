@@ -1,0 +1,1165 @@
+2024-04-24 23:03:21.173 [http-nio-6021-exec-3] ERROR ChannelImp() - ====> init channel network error, org.fisco.bcos.sdk.network.NetworkException: 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+<==== STEP1 Result: try to connect nodes with ecdsa context failed for cert missing
+* Missed certificates: [resources/conf/ca.crt,resources/conf/sdk.crt,resources/conf/sdk.key,]
+currentPath: /home/hirasawa/weid-build-tools
+
+----------------------------
+====> STEP2: connect nodes with ecdsa context failed, try to connect nodes with sm-context...
+<==== STEP2 Result: connect with sm context failed for cert missing.
+* Missed certificates: 
+[resources/conf/gm/gmca.crt,resources/conf/gm/gmsdk.crt,resources/conf/gm/gmsdk.key,resources/conf/gm/gmensdk.key,resources/conf/gm/gmensdk.crt,]
+currentPath: /home/hirasawa/weid-build-tools
+----------------------------
+<====> Error: try to connect nodes with both ecdsa and sm context failed <====>
+<====>[1;31m Please refer to github issue: https://github.com/FISCO-BCOS/java-sdk/issues/536 [0m
+<====>[1;31m Please refer to fisco-docs: https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/faq/connect.html [0m
+----------------------------
+* FISCO BCOS Java SDK Version: 2.9.1
+* Support secp256k1 : true
+* Java Version : 11.0.22
+* JDK Disabled NamedCurves : null
+* JDK DisableNative Option : null
+* OS Name : Linux
+* OS Arch : amd64
+* OS Version : 5.15.146.1-microsoft-standard-WSL2
+* JVM Version : 11.0.22+7-post-Ubuntu-0ubuntu220.04.1
+* JVM Vendor : Ubuntu
+* JVM Vendor URL : https://ubuntu.com/
+
+ 
+2024-04-24 23:03:21.174 [http-nio-6021-exec-3] ERROR CheckNodeServiceV2() - [check] check the node fail.
+org.fisco.bcos.sdk.BcosSDKException: create BcosSDK failed, error info: init channel network error!
+org.fisco.bcos.sdk.network.NetworkException: 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+<==== STEP1 Result: try to connect nodes with ecdsa context failed for cert missing
+* Missed certificates: [resources/conf/ca.crt,resources/conf/sdk.crt,resources/conf/sdk.key,]
+currentPath: /home/hirasawa/weid-build-tools
+
+----------------------------
+====> STEP2: connect nodes with ecdsa context failed, try to connect nodes with sm-context...
+<==== STEP2 Result: connect with sm context failed for cert missing.
+* Missed certificates: 
+[resources/conf/gm/gmca.crt,resources/conf/gm/gmsdk.crt,resources/conf/gm/gmsdk.key,resources/conf/gm/gmensdk.key,resources/conf/gm/gmensdk.crt,]
+currentPath: /home/hirasawa/weid-build-tools
+----------------------------
+<====> Error: try to connect nodes with both ecdsa and sm context failed <====>
+<====>[1;31m Please refer to github issue: https://github.com/FISCO-BCOS/java-sdk/issues/536 [0m
+<====>[1;31m Please refer to fisco-docs: https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/faq/connect.html [0m
+----------------------------
+* FISCO BCOS Java SDK Version: 2.9.1
+* Support secp256k1 : true
+* Java Version : 11.0.22
+* JDK Disabled NamedCurves : null
+* JDK DisableNative Option : null
+* OS Name : Linux
+* OS Arch : amd64
+* OS Version : 5.15.146.1-microsoft-standard-WSL2
+* JVM Version : 11.0.22+7-post-Ubuntu-0ubuntu220.04.1
+* JVM Vendor : Ubuntu
+* JVM Vendor URL : https://ubuntu.com/
+
+
+	at org.fisco.bcos.sdk.BcosSDK.<init>(BcosSDK.java:108) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	at com.webank.weid.service.v2.CheckNodeServiceV2.buildBcosSDK(CheckNodeServiceV2.java:70) ~[weid-build-tools-3.1.1-rc.1.jar:?]
+	at com.webank.weid.service.v2.CheckNodeServiceV2.check(CheckNodeServiceV2.java:42) [weid-build-tools-3.1.1-rc.1.jar:?]
+	at com.webank.weid.service.ConfigService.checkNode(ConfigService.java:546) [weid-build-tools-3.1.1-rc.1.jar:?]
+	at com.webank.weid.controller.ConfigurationController.checkNode(ConfigurationController.java:177) [weid-build-tools-3.1.1-rc.1.jar:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) [spring-web-5.3.25.jar:5.3.25]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) [spring-web-5.3.25.jar:5.3.25]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) [spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) [spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) [spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) [spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061) [spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961) [spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.3.2.jar:5.3.2]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) [tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.3.2.jar:5.3.2]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at com.webank.weid.filter.XssFilter.doFilter(XssFilter.java:29) [weid-build-tools-3.1.1-rc.1.jar:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.3.25.jar:5.3.25]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.25.jar:5.3.25]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.3.25.jar:5.3.25]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.25.jar:5.3.25]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.3.25.jar:5.3.25]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.25.jar:5.3.25]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+Caused by: io.netty.channel.ChannelException: init channel network error!
+org.fisco.bcos.sdk.network.NetworkException: 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+<==== STEP1 Result: try to connect nodes with ecdsa context failed for cert missing
+* Missed certificates: [resources/conf/ca.crt,resources/conf/sdk.crt,resources/conf/sdk.key,]
+currentPath: /home/hirasawa/weid-build-tools
+
+----------------------------
+====> STEP2: connect nodes with ecdsa context failed, try to connect nodes with sm-context...
+<==== STEP2 Result: connect with sm context failed for cert missing.
+* Missed certificates: 
+[resources/conf/gm/gmca.crt,resources/conf/gm/gmsdk.crt,resources/conf/gm/gmsdk.key,resources/conf/gm/gmensdk.key,resources/conf/gm/gmensdk.crt,]
+currentPath: /home/hirasawa/weid-build-tools
+----------------------------
+<====> Error: try to connect nodes with both ecdsa and sm context failed <====>
+<====>[1;31m Please refer to github issue: https://github.com/FISCO-BCOS/java-sdk/issues/536 [0m
+<====>[1;31m Please refer to fisco-docs: https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/faq/connect.html [0m
+----------------------------
+* FISCO BCOS Java SDK Version: 2.9.1
+* Support secp256k1 : true
+* Java Version : 11.0.22
+* JDK Disabled NamedCurves : null
+* JDK DisableNative Option : null
+* OS Name : Linux
+* OS Arch : amd64
+* OS Version : 5.15.146.1-microsoft-standard-WSL2
+* JVM Version : 11.0.22+7-post-Ubuntu-0ubuntu220.04.1
+* JVM Vendor : Ubuntu
+* JVM Vendor URL : https://ubuntu.com/
+
+
+	at org.fisco.bcos.sdk.channel.ChannelImp.start(ChannelImp.java:96) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	at org.fisco.bcos.sdk.BcosSDK.<init>(BcosSDK.java:75) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	... 57 more
+Caused by: org.fisco.bcos.sdk.network.NetworkException: org.fisco.bcos.sdk.network.NetworkException: 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+<==== STEP1 Result: try to connect nodes with ecdsa context failed for cert missing
+* Missed certificates: [resources/conf/ca.crt,resources/conf/sdk.crt,resources/conf/sdk.key,]
+currentPath: /home/hirasawa/weid-build-tools
+
+----------------------------
+====> STEP2: connect nodes with ecdsa context failed, try to connect nodes with sm-context...
+<==== STEP2 Result: connect with sm context failed for cert missing.
+* Missed certificates: 
+[resources/conf/gm/gmca.crt,resources/conf/gm/gmsdk.crt,resources/conf/gm/gmsdk.key,resources/conf/gm/gmensdk.key,resources/conf/gm/gmensdk.crt,]
+currentPath: /home/hirasawa/weid-build-tools
+----------------------------
+<====> Error: try to connect nodes with both ecdsa and sm context failed <====>
+<====>[1;31m Please refer to github issue: https://github.com/FISCO-BCOS/java-sdk/issues/536 [0m
+<====>[1;31m Please refer to fisco-docs: https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/faq/connect.html [0m
+----------------------------
+* FISCO BCOS Java SDK Version: 2.9.1
+* Support secp256k1 : true
+* Java Version : 11.0.22
+* JDK Disabled NamedCurves : null
+* JDK DisableNative Option : null
+* OS Name : Linux
+* OS Arch : amd64
+* OS Version : 5.15.146.1-microsoft-standard-WSL2
+* JVM Version : 11.0.22+7-post-Ubuntu-0ubuntu220.04.1
+* JVM Vendor : Ubuntu
+* JVM Vendor URL : https://ubuntu.com/
+
+
+	at org.fisco.bcos.sdk.network.NetworkImp.start(NetworkImp.java:268) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	at org.fisco.bcos.sdk.channel.ChannelImp.start(ChannelImp.java:89) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	at org.fisco.bcos.sdk.BcosSDK.<init>(BcosSDK.java:75) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	... 57 more
+Caused by: org.fisco.bcos.sdk.network.NetworkException: 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+<==== STEP1 Result: try to connect nodes with ecdsa context failed for cert missing
+* Missed certificates: [resources/conf/ca.crt,resources/conf/sdk.crt,resources/conf/sdk.key,]
+currentPath: /home/hirasawa/weid-build-tools
+
+----------------------------
+====> STEP2: connect nodes with ecdsa context failed, try to connect nodes with sm-context...
+<==== STEP2 Result: connect with sm context failed for cert missing.
+* Missed certificates: 
+[resources/conf/gm/gmca.crt,resources/conf/gm/gmsdk.crt,resources/conf/gm/gmsdk.key,resources/conf/gm/gmensdk.key,resources/conf/gm/gmensdk.crt,]
+currentPath: /home/hirasawa/weid-build-tools
+----------------------------
+<====> Error: try to connect nodes with both ecdsa and sm context failed <====>
+<====>[1;31m Please refer to github issue: https://github.com/FISCO-BCOS/java-sdk/issues/536 [0m
+<====>[1;31m Please refer to fisco-docs: https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/faq/connect.html [0m
+----------------------------
+* FISCO BCOS Java SDK Version: 2.9.1
+* Support secp256k1 : true
+* Java Version : 11.0.22
+* JDK Disabled NamedCurves : null
+* JDK DisableNative Option : null
+* OS Name : Linux
+* OS Arch : amd64
+* OS Version : 5.15.146.1-microsoft-standard-WSL2
+* JVM Version : 11.0.22+7-post-Ubuntu-0ubuntu220.04.1
+* JVM Vendor : Ubuntu
+* JVM Vendor URL : https://ubuntu.com/
+
+
+	at org.fisco.bcos.sdk.network.NetworkImp.start(NetworkImp.java:232) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	at org.fisco.bcos.sdk.channel.ChannelImp.start(ChannelImp.java:89) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	at org.fisco.bcos.sdk.BcosSDK.<init>(BcosSDK.java:75) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	... 57 more
+2024-04-24 23:03:21.178 [http-nio-6021-exec-3] ERROR ConfigService() - [checkNode] checkNode with fail.
+2024-04-24 23:05:53.485 [http-nio-6021-exec-4] ERROR ChannelImp() - ====> init channel network error, org.fisco.bcos.sdk.network.NetworkException: 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+<==== STEP1 Result: try to connect nodes with ecdsa context failed for cert missing
+* Missed certificates: [resources/conf/ca.crt,resources/conf/sdk.crt,resources/conf/sdk.key,]
+currentPath: /home/hirasawa/weid-build-tools
+
+----------------------------
+====> STEP2: connect nodes with ecdsa context failed, try to connect nodes with sm-context...
+<==== STEP2 Result: connect with sm context failed for cert missing.
+* Missed certificates: 
+[resources/conf/gm/gmca.crt,resources/conf/gm/gmsdk.crt,resources/conf/gm/gmsdk.key,resources/conf/gm/gmensdk.key,resources/conf/gm/gmensdk.crt,]
+currentPath: /home/hirasawa/weid-build-tools
+----------------------------
+<====> Error: try to connect nodes with both ecdsa and sm context failed <====>
+<====>[1;31m Please refer to github issue: https://github.com/FISCO-BCOS/java-sdk/issues/536 [0m
+<====>[1;31m Please refer to fisco-docs: https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/faq/connect.html [0m
+----------------------------
+* FISCO BCOS Java SDK Version: 2.9.1
+* Support secp256k1 : true
+* Java Version : 11.0.22
+* JDK Disabled NamedCurves : null
+* JDK DisableNative Option : null
+* OS Name : Linux
+* OS Arch : amd64
+* OS Version : 5.15.146.1-microsoft-standard-WSL2
+* JVM Version : 11.0.22+7-post-Ubuntu-0ubuntu220.04.1
+* JVM Vendor : Ubuntu
+* JVM Vendor URL : https://ubuntu.com/
+
+ 
+2024-04-24 23:05:53.485 [http-nio-6021-exec-4] ERROR CheckNodeServiceV2() - [check] check the node fail.
+org.fisco.bcos.sdk.BcosSDKException: create BcosSDK failed, error info: init channel network error!
+org.fisco.bcos.sdk.network.NetworkException: 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+<==== STEP1 Result: try to connect nodes with ecdsa context failed for cert missing
+* Missed certificates: [resources/conf/ca.crt,resources/conf/sdk.crt,resources/conf/sdk.key,]
+currentPath: /home/hirasawa/weid-build-tools
+
+----------------------------
+====> STEP2: connect nodes with ecdsa context failed, try to connect nodes with sm-context...
+<==== STEP2 Result: connect with sm context failed for cert missing.
+* Missed certificates: 
+[resources/conf/gm/gmca.crt,resources/conf/gm/gmsdk.crt,resources/conf/gm/gmsdk.key,resources/conf/gm/gmensdk.key,resources/conf/gm/gmensdk.crt,]
+currentPath: /home/hirasawa/weid-build-tools
+----------------------------
+<====> Error: try to connect nodes with both ecdsa and sm context failed <====>
+<====>[1;31m Please refer to github issue: https://github.com/FISCO-BCOS/java-sdk/issues/536 [0m
+<====>[1;31m Please refer to fisco-docs: https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/faq/connect.html [0m
+----------------------------
+* FISCO BCOS Java SDK Version: 2.9.1
+* Support secp256k1 : true
+* Java Version : 11.0.22
+* JDK Disabled NamedCurves : null
+* JDK DisableNative Option : null
+* OS Name : Linux
+* OS Arch : amd64
+* OS Version : 5.15.146.1-microsoft-standard-WSL2
+* JVM Version : 11.0.22+7-post-Ubuntu-0ubuntu220.04.1
+* JVM Vendor : Ubuntu
+* JVM Vendor URL : https://ubuntu.com/
+
+
+	at org.fisco.bcos.sdk.BcosSDK.<init>(BcosSDK.java:108) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	at com.webank.weid.service.v2.CheckNodeServiceV2.buildBcosSDK(CheckNodeServiceV2.java:70) ~[weid-build-tools-3.1.1-rc.1.jar:?]
+	at com.webank.weid.service.v2.CheckNodeServiceV2.check(CheckNodeServiceV2.java:42) [weid-build-tools-3.1.1-rc.1.jar:?]
+	at com.webank.weid.service.ConfigService.checkNode(ConfigService.java:546) [weid-build-tools-3.1.1-rc.1.jar:?]
+	at com.webank.weid.controller.ConfigurationController.checkNode(ConfigurationController.java:177) [weid-build-tools-3.1.1-rc.1.jar:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) [spring-web-5.3.25.jar:5.3.25]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) [spring-web-5.3.25.jar:5.3.25]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) [spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) [spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) [spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) [spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061) [spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961) [spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.3.2.jar:5.3.2]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) [tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.3.2.jar:5.3.2]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at com.webank.weid.filter.XssFilter.doFilter(XssFilter.java:29) [weid-build-tools-3.1.1-rc.1.jar:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.3.25.jar:5.3.25]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.25.jar:5.3.25]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.3.25.jar:5.3.25]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.25.jar:5.3.25]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.3.25.jar:5.3.25]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.25.jar:5.3.25]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+Caused by: io.netty.channel.ChannelException: init channel network error!
+org.fisco.bcos.sdk.network.NetworkException: 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+<==== STEP1 Result: try to connect nodes with ecdsa context failed for cert missing
+* Missed certificates: [resources/conf/ca.crt,resources/conf/sdk.crt,resources/conf/sdk.key,]
+currentPath: /home/hirasawa/weid-build-tools
+
+----------------------------
+====> STEP2: connect nodes with ecdsa context failed, try to connect nodes with sm-context...
+<==== STEP2 Result: connect with sm context failed for cert missing.
+* Missed certificates: 
+[resources/conf/gm/gmca.crt,resources/conf/gm/gmsdk.crt,resources/conf/gm/gmsdk.key,resources/conf/gm/gmensdk.key,resources/conf/gm/gmensdk.crt,]
+currentPath: /home/hirasawa/weid-build-tools
+----------------------------
+<====> Error: try to connect nodes with both ecdsa and sm context failed <====>
+<====>[1;31m Please refer to github issue: https://github.com/FISCO-BCOS/java-sdk/issues/536 [0m
+<====>[1;31m Please refer to fisco-docs: https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/faq/connect.html [0m
+----------------------------
+* FISCO BCOS Java SDK Version: 2.9.1
+* Support secp256k1 : true
+* Java Version : 11.0.22
+* JDK Disabled NamedCurves : null
+* JDK DisableNative Option : null
+* OS Name : Linux
+* OS Arch : amd64
+* OS Version : 5.15.146.1-microsoft-standard-WSL2
+* JVM Version : 11.0.22+7-post-Ubuntu-0ubuntu220.04.1
+* JVM Vendor : Ubuntu
+* JVM Vendor URL : https://ubuntu.com/
+
+
+	at org.fisco.bcos.sdk.channel.ChannelImp.start(ChannelImp.java:96) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	at org.fisco.bcos.sdk.BcosSDK.<init>(BcosSDK.java:75) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	... 57 more
+Caused by: org.fisco.bcos.sdk.network.NetworkException: org.fisco.bcos.sdk.network.NetworkException: 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+<==== STEP1 Result: try to connect nodes with ecdsa context failed for cert missing
+* Missed certificates: [resources/conf/ca.crt,resources/conf/sdk.crt,resources/conf/sdk.key,]
+currentPath: /home/hirasawa/weid-build-tools
+
+----------------------------
+====> STEP2: connect nodes with ecdsa context failed, try to connect nodes with sm-context...
+<==== STEP2 Result: connect with sm context failed for cert missing.
+* Missed certificates: 
+[resources/conf/gm/gmca.crt,resources/conf/gm/gmsdk.crt,resources/conf/gm/gmsdk.key,resources/conf/gm/gmensdk.key,resources/conf/gm/gmensdk.crt,]
+currentPath: /home/hirasawa/weid-build-tools
+----------------------------
+<====> Error: try to connect nodes with both ecdsa and sm context failed <====>
+<====>[1;31m Please refer to github issue: https://github.com/FISCO-BCOS/java-sdk/issues/536 [0m
+<====>[1;31m Please refer to fisco-docs: https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/faq/connect.html [0m
+----------------------------
+* FISCO BCOS Java SDK Version: 2.9.1
+* Support secp256k1 : true
+* Java Version : 11.0.22
+* JDK Disabled NamedCurves : null
+* JDK DisableNative Option : null
+* OS Name : Linux
+* OS Arch : amd64
+* OS Version : 5.15.146.1-microsoft-standard-WSL2
+* JVM Version : 11.0.22+7-post-Ubuntu-0ubuntu220.04.1
+* JVM Vendor : Ubuntu
+* JVM Vendor URL : https://ubuntu.com/
+
+
+	at org.fisco.bcos.sdk.network.NetworkImp.start(NetworkImp.java:268) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	at org.fisco.bcos.sdk.channel.ChannelImp.start(ChannelImp.java:89) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	at org.fisco.bcos.sdk.BcosSDK.<init>(BcosSDK.java:75) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	... 57 more
+Caused by: org.fisco.bcos.sdk.network.NetworkException: 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+<==== STEP1 Result: try to connect nodes with ecdsa context failed for cert missing
+* Missed certificates: [resources/conf/ca.crt,resources/conf/sdk.crt,resources/conf/sdk.key,]
+currentPath: /home/hirasawa/weid-build-tools
+
+----------------------------
+====> STEP2: connect nodes with ecdsa context failed, try to connect nodes with sm-context...
+<==== STEP2 Result: connect with sm context failed for cert missing.
+* Missed certificates: 
+[resources/conf/gm/gmca.crt,resources/conf/gm/gmsdk.crt,resources/conf/gm/gmsdk.key,resources/conf/gm/gmensdk.key,resources/conf/gm/gmensdk.crt,]
+currentPath: /home/hirasawa/weid-build-tools
+----------------------------
+<====> Error: try to connect nodes with both ecdsa and sm context failed <====>
+<====>[1;31m Please refer to github issue: https://github.com/FISCO-BCOS/java-sdk/issues/536 [0m
+<====>[1;31m Please refer to fisco-docs: https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/faq/connect.html [0m
+----------------------------
+* FISCO BCOS Java SDK Version: 2.9.1
+* Support secp256k1 : true
+* Java Version : 11.0.22
+* JDK Disabled NamedCurves : null
+* JDK DisableNative Option : null
+* OS Name : Linux
+* OS Arch : amd64
+* OS Version : 5.15.146.1-microsoft-standard-WSL2
+* JVM Version : 11.0.22+7-post-Ubuntu-0ubuntu220.04.1
+* JVM Vendor : Ubuntu
+* JVM Vendor URL : https://ubuntu.com/
+
+
+	at org.fisco.bcos.sdk.network.NetworkImp.start(NetworkImp.java:232) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	at org.fisco.bcos.sdk.channel.ChannelImp.start(ChannelImp.java:89) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	at org.fisco.bcos.sdk.BcosSDK.<init>(BcosSDK.java:75) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	... 57 more
+2024-04-24 23:05:53.485 [http-nio-6021-exec-4] ERROR ConfigService() - [checkNode] checkNode with fail.
+2024-04-24 23:38:38.690 [http-nio-6021-exec-1] ERROR ChannelImp() - ====> init channel network error, org.fisco.bcos.sdk.network.NetworkException: 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+<==== STEP1 Result: try to connect nodes with ecdsa context failed for cert missing
+* Missed certificates: [resources/conf/ca.crt,resources/conf/sdk.crt,resources/conf/sdk.key,]
+currentPath: /home/hirasawa/weid-build-tools
+
+----------------------------
+====> STEP2: connect nodes with ecdsa context failed, try to connect nodes with sm-context...
+<==== STEP2 Result: connect with sm context failed for cert missing.
+* Missed certificates: 
+[resources/conf/gm/gmca.crt,resources/conf/gm/gmsdk.crt,resources/conf/gm/gmsdk.key,resources/conf/gm/gmensdk.key,resources/conf/gm/gmensdk.crt,]
+currentPath: /home/hirasawa/weid-build-tools
+----------------------------
+<====> Error: try to connect nodes with both ecdsa and sm context failed <====>
+<====>[1;31m Please refer to github issue: https://github.com/FISCO-BCOS/java-sdk/issues/536 [0m
+<====>[1;31m Please refer to fisco-docs: https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/faq/connect.html [0m
+----------------------------
+* FISCO BCOS Java SDK Version: 2.9.1
+* Support secp256k1 : true
+* Java Version : 11.0.22
+* JDK Disabled NamedCurves : null
+* JDK DisableNative Option : null
+* OS Name : Linux
+* OS Arch : amd64
+* OS Version : 5.15.146.1-microsoft-standard-WSL2
+* JVM Version : 11.0.22+7-post-Ubuntu-0ubuntu220.04.1
+* JVM Vendor : Ubuntu
+* JVM Vendor URL : https://ubuntu.com/
+
+ 
+2024-04-24 23:38:38.691 [http-nio-6021-exec-1] ERROR CheckNodeServiceV2() - [check] check the node fail.
+org.fisco.bcos.sdk.BcosSDKException: create BcosSDK failed, error info: init channel network error!
+org.fisco.bcos.sdk.network.NetworkException: 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+<==== STEP1 Result: try to connect nodes with ecdsa context failed for cert missing
+* Missed certificates: [resources/conf/ca.crt,resources/conf/sdk.crt,resources/conf/sdk.key,]
+currentPath: /home/hirasawa/weid-build-tools
+
+----------------------------
+====> STEP2: connect nodes with ecdsa context failed, try to connect nodes with sm-context...
+<==== STEP2 Result: connect with sm context failed for cert missing.
+* Missed certificates: 
+[resources/conf/gm/gmca.crt,resources/conf/gm/gmsdk.crt,resources/conf/gm/gmsdk.key,resources/conf/gm/gmensdk.key,resources/conf/gm/gmensdk.crt,]
+currentPath: /home/hirasawa/weid-build-tools
+----------------------------
+<====> Error: try to connect nodes with both ecdsa and sm context failed <====>
+<====>[1;31m Please refer to github issue: https://github.com/FISCO-BCOS/java-sdk/issues/536 [0m
+<====>[1;31m Please refer to fisco-docs: https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/faq/connect.html [0m
+----------------------------
+* FISCO BCOS Java SDK Version: 2.9.1
+* Support secp256k1 : true
+* Java Version : 11.0.22
+* JDK Disabled NamedCurves : null
+* JDK DisableNative Option : null
+* OS Name : Linux
+* OS Arch : amd64
+* OS Version : 5.15.146.1-microsoft-standard-WSL2
+* JVM Version : 11.0.22+7-post-Ubuntu-0ubuntu220.04.1
+* JVM Vendor : Ubuntu
+* JVM Vendor URL : https://ubuntu.com/
+
+
+	at org.fisco.bcos.sdk.BcosSDK.<init>(BcosSDK.java:108) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	at com.webank.weid.service.v2.CheckNodeServiceV2.buildBcosSDK(CheckNodeServiceV2.java:70) ~[weid-build-tools-3.1.1-rc.1.jar:?]
+	at com.webank.weid.service.v2.CheckNodeServiceV2.check(CheckNodeServiceV2.java:42) [weid-build-tools-3.1.1-rc.1.jar:?]
+	at com.webank.weid.service.ConfigService.checkNode(ConfigService.java:546) [weid-build-tools-3.1.1-rc.1.jar:?]
+	at com.webank.weid.controller.ConfigurationController.checkNode(ConfigurationController.java:177) [weid-build-tools-3.1.1-rc.1.jar:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) [spring-web-5.3.25.jar:5.3.25]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) [spring-web-5.3.25.jar:5.3.25]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) [spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) [spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) [spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) [spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061) [spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961) [spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.3.2.jar:5.3.2]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) [tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.3.2.jar:5.3.2]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at com.webank.weid.filter.XssFilter.doFilter(XssFilter.java:29) [weid-build-tools-3.1.1-rc.1.jar:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.3.25.jar:5.3.25]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.25.jar:5.3.25]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.3.25.jar:5.3.25]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.25.jar:5.3.25]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.3.25.jar:5.3.25]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.25.jar:5.3.25]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+Caused by: io.netty.channel.ChannelException: init channel network error!
+org.fisco.bcos.sdk.network.NetworkException: 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+<==== STEP1 Result: try to connect nodes with ecdsa context failed for cert missing
+* Missed certificates: [resources/conf/ca.crt,resources/conf/sdk.crt,resources/conf/sdk.key,]
+currentPath: /home/hirasawa/weid-build-tools
+
+----------------------------
+====> STEP2: connect nodes with ecdsa context failed, try to connect nodes with sm-context...
+<==== STEP2 Result: connect with sm context failed for cert missing.
+* Missed certificates: 
+[resources/conf/gm/gmca.crt,resources/conf/gm/gmsdk.crt,resources/conf/gm/gmsdk.key,resources/conf/gm/gmensdk.key,resources/conf/gm/gmensdk.crt,]
+currentPath: /home/hirasawa/weid-build-tools
+----------------------------
+<====> Error: try to connect nodes with both ecdsa and sm context failed <====>
+<====>[1;31m Please refer to github issue: https://github.com/FISCO-BCOS/java-sdk/issues/536 [0m
+<====>[1;31m Please refer to fisco-docs: https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/faq/connect.html [0m
+----------------------------
+* FISCO BCOS Java SDK Version: 2.9.1
+* Support secp256k1 : true
+* Java Version : 11.0.22
+* JDK Disabled NamedCurves : null
+* JDK DisableNative Option : null
+* OS Name : Linux
+* OS Arch : amd64
+* OS Version : 5.15.146.1-microsoft-standard-WSL2
+* JVM Version : 11.0.22+7-post-Ubuntu-0ubuntu220.04.1
+* JVM Vendor : Ubuntu
+* JVM Vendor URL : https://ubuntu.com/
+
+
+	at org.fisco.bcos.sdk.channel.ChannelImp.start(ChannelImp.java:96) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	at org.fisco.bcos.sdk.BcosSDK.<init>(BcosSDK.java:75) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	... 57 more
+Caused by: org.fisco.bcos.sdk.network.NetworkException: org.fisco.bcos.sdk.network.NetworkException: 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+<==== STEP1 Result: try to connect nodes with ecdsa context failed for cert missing
+* Missed certificates: [resources/conf/ca.crt,resources/conf/sdk.crt,resources/conf/sdk.key,]
+currentPath: /home/hirasawa/weid-build-tools
+
+----------------------------
+====> STEP2: connect nodes with ecdsa context failed, try to connect nodes with sm-context...
+<==== STEP2 Result: connect with sm context failed for cert missing.
+* Missed certificates: 
+[resources/conf/gm/gmca.crt,resources/conf/gm/gmsdk.crt,resources/conf/gm/gmsdk.key,resources/conf/gm/gmensdk.key,resources/conf/gm/gmensdk.crt,]
+currentPath: /home/hirasawa/weid-build-tools
+----------------------------
+<====> Error: try to connect nodes with both ecdsa and sm context failed <====>
+<====>[1;31m Please refer to github issue: https://github.com/FISCO-BCOS/java-sdk/issues/536 [0m
+<====>[1;31m Please refer to fisco-docs: https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/faq/connect.html [0m
+----------------------------
+* FISCO BCOS Java SDK Version: 2.9.1
+* Support secp256k1 : true
+* Java Version : 11.0.22
+* JDK Disabled NamedCurves : null
+* JDK DisableNative Option : null
+* OS Name : Linux
+* OS Arch : amd64
+* OS Version : 5.15.146.1-microsoft-standard-WSL2
+* JVM Version : 11.0.22+7-post-Ubuntu-0ubuntu220.04.1
+* JVM Vendor : Ubuntu
+* JVM Vendor URL : https://ubuntu.com/
+
+
+	at org.fisco.bcos.sdk.network.NetworkImp.start(NetworkImp.java:268) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	at org.fisco.bcos.sdk.channel.ChannelImp.start(ChannelImp.java:89) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	at org.fisco.bcos.sdk.BcosSDK.<init>(BcosSDK.java:75) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	... 57 more
+Caused by: org.fisco.bcos.sdk.network.NetworkException: 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+<==== STEP1 Result: try to connect nodes with ecdsa context failed for cert missing
+* Missed certificates: [resources/conf/ca.crt,resources/conf/sdk.crt,resources/conf/sdk.key,]
+currentPath: /home/hirasawa/weid-build-tools
+
+----------------------------
+====> STEP2: connect nodes with ecdsa context failed, try to connect nodes with sm-context...
+<==== STEP2 Result: connect with sm context failed for cert missing.
+* Missed certificates: 
+[resources/conf/gm/gmca.crt,resources/conf/gm/gmsdk.crt,resources/conf/gm/gmsdk.key,resources/conf/gm/gmensdk.key,resources/conf/gm/gmensdk.crt,]
+currentPath: /home/hirasawa/weid-build-tools
+----------------------------
+<====> Error: try to connect nodes with both ecdsa and sm context failed <====>
+<====>[1;31m Please refer to github issue: https://github.com/FISCO-BCOS/java-sdk/issues/536 [0m
+<====>[1;31m Please refer to fisco-docs: https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/faq/connect.html [0m
+----------------------------
+* FISCO BCOS Java SDK Version: 2.9.1
+* Support secp256k1 : true
+* Java Version : 11.0.22
+* JDK Disabled NamedCurves : null
+* JDK DisableNative Option : null
+* OS Name : Linux
+* OS Arch : amd64
+* OS Version : 5.15.146.1-microsoft-standard-WSL2
+* JVM Version : 11.0.22+7-post-Ubuntu-0ubuntu220.04.1
+* JVM Vendor : Ubuntu
+* JVM Vendor URL : https://ubuntu.com/
+
+
+	at org.fisco.bcos.sdk.network.NetworkImp.start(NetworkImp.java:232) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	at org.fisco.bcos.sdk.channel.ChannelImp.start(ChannelImp.java:89) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	at org.fisco.bcos.sdk.BcosSDK.<init>(BcosSDK.java:75) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	... 57 more
+2024-04-24 23:38:38.695 [http-nio-6021-exec-1] ERROR ConfigService() - [checkNode] checkNode with fail.
+2024-04-24 23:40:28.810 [http-nio-6021-exec-9] ERROR ChannelImp() - ====> init channel network error, org.fisco.bcos.sdk.network.NetworkException: 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+<==== STEP1 Result: try to connect nodes with ecdsa context failed for cert missing
+* Missed certificates: [resources/conf/ca.crt,resources/conf/sdk.crt,resources/conf/sdk.key,]
+currentPath: /home/hirasawa/weid-build-tools
+
+----------------------------
+====> STEP2: connect nodes with ecdsa context failed, try to connect nodes with sm-context...
+<==== STEP2 Result: connect with sm context failed for cert missing.
+* Missed certificates: 
+[resources/conf/gm/gmca.crt,resources/conf/gm/gmsdk.crt,resources/conf/gm/gmsdk.key,resources/conf/gm/gmensdk.key,resources/conf/gm/gmensdk.crt,]
+currentPath: /home/hirasawa/weid-build-tools
+----------------------------
+<====> Error: try to connect nodes with both ecdsa and sm context failed <====>
+<====>[1;31m Please refer to github issue: https://github.com/FISCO-BCOS/java-sdk/issues/536 [0m
+<====>[1;31m Please refer to fisco-docs: https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/faq/connect.html [0m
+----------------------------
+* FISCO BCOS Java SDK Version: 2.9.1
+* Support secp256k1 : true
+* Java Version : 11.0.22
+* JDK Disabled NamedCurves : null
+* JDK DisableNative Option : null
+* OS Name : Linux
+* OS Arch : amd64
+* OS Version : 5.15.146.1-microsoft-standard-WSL2
+* JVM Version : 11.0.22+7-post-Ubuntu-0ubuntu220.04.1
+* JVM Vendor : Ubuntu
+* JVM Vendor URL : https://ubuntu.com/
+
+ 
+2024-04-24 23:40:28.810 [http-nio-6021-exec-9] ERROR CheckNodeServiceV2() - [check] check the node fail.
+org.fisco.bcos.sdk.BcosSDKException: create BcosSDK failed, error info: init channel network error!
+org.fisco.bcos.sdk.network.NetworkException: 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+<==== STEP1 Result: try to connect nodes with ecdsa context failed for cert missing
+* Missed certificates: [resources/conf/ca.crt,resources/conf/sdk.crt,resources/conf/sdk.key,]
+currentPath: /home/hirasawa/weid-build-tools
+
+----------------------------
+====> STEP2: connect nodes with ecdsa context failed, try to connect nodes with sm-context...
+<==== STEP2 Result: connect with sm context failed for cert missing.
+* Missed certificates: 
+[resources/conf/gm/gmca.crt,resources/conf/gm/gmsdk.crt,resources/conf/gm/gmsdk.key,resources/conf/gm/gmensdk.key,resources/conf/gm/gmensdk.crt,]
+currentPath: /home/hirasawa/weid-build-tools
+----------------------------
+<====> Error: try to connect nodes with both ecdsa and sm context failed <====>
+<====>[1;31m Please refer to github issue: https://github.com/FISCO-BCOS/java-sdk/issues/536 [0m
+<====>[1;31m Please refer to fisco-docs: https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/faq/connect.html [0m
+----------------------------
+* FISCO BCOS Java SDK Version: 2.9.1
+* Support secp256k1 : true
+* Java Version : 11.0.22
+* JDK Disabled NamedCurves : null
+* JDK DisableNative Option : null
+* OS Name : Linux
+* OS Arch : amd64
+* OS Version : 5.15.146.1-microsoft-standard-WSL2
+* JVM Version : 11.0.22+7-post-Ubuntu-0ubuntu220.04.1
+* JVM Vendor : Ubuntu
+* JVM Vendor URL : https://ubuntu.com/
+
+
+	at org.fisco.bcos.sdk.BcosSDK.<init>(BcosSDK.java:108) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	at com.webank.weid.service.v2.CheckNodeServiceV2.buildBcosSDK(CheckNodeServiceV2.java:70) ~[weid-build-tools-3.1.1-rc.1.jar:?]
+	at com.webank.weid.service.v2.CheckNodeServiceV2.check(CheckNodeServiceV2.java:42) [weid-build-tools-3.1.1-rc.1.jar:?]
+	at com.webank.weid.service.ConfigService.checkNode(ConfigService.java:546) [weid-build-tools-3.1.1-rc.1.jar:?]
+	at com.webank.weid.controller.ConfigurationController.checkNode(ConfigurationController.java:177) [weid-build-tools-3.1.1-rc.1.jar:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) [spring-web-5.3.25.jar:5.3.25]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) [spring-web-5.3.25.jar:5.3.25]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) [spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) [spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) [spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) [spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061) [spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961) [spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.3.2.jar:5.3.2]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) [tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.3.2.jar:5.3.2]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at com.webank.weid.filter.XssFilter.doFilter(XssFilter.java:29) [weid-build-tools-3.1.1-rc.1.jar:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.3.25.jar:5.3.25]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.25.jar:5.3.25]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.3.25.jar:5.3.25]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.25.jar:5.3.25]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.3.25.jar:5.3.25]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.25.jar:5.3.25]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+Caused by: io.netty.channel.ChannelException: init channel network error!
+org.fisco.bcos.sdk.network.NetworkException: 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+<==== STEP1 Result: try to connect nodes with ecdsa context failed for cert missing
+* Missed certificates: [resources/conf/ca.crt,resources/conf/sdk.crt,resources/conf/sdk.key,]
+currentPath: /home/hirasawa/weid-build-tools
+
+----------------------------
+====> STEP2: connect nodes with ecdsa context failed, try to connect nodes with sm-context...
+<==== STEP2 Result: connect with sm context failed for cert missing.
+* Missed certificates: 
+[resources/conf/gm/gmca.crt,resources/conf/gm/gmsdk.crt,resources/conf/gm/gmsdk.key,resources/conf/gm/gmensdk.key,resources/conf/gm/gmensdk.crt,]
+currentPath: /home/hirasawa/weid-build-tools
+----------------------------
+<====> Error: try to connect nodes with both ecdsa and sm context failed <====>
+<====>[1;31m Please refer to github issue: https://github.com/FISCO-BCOS/java-sdk/issues/536 [0m
+<====>[1;31m Please refer to fisco-docs: https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/faq/connect.html [0m
+----------------------------
+* FISCO BCOS Java SDK Version: 2.9.1
+* Support secp256k1 : true
+* Java Version : 11.0.22
+* JDK Disabled NamedCurves : null
+* JDK DisableNative Option : null
+* OS Name : Linux
+* OS Arch : amd64
+* OS Version : 5.15.146.1-microsoft-standard-WSL2
+* JVM Version : 11.0.22+7-post-Ubuntu-0ubuntu220.04.1
+* JVM Vendor : Ubuntu
+* JVM Vendor URL : https://ubuntu.com/
+
+
+	at org.fisco.bcos.sdk.channel.ChannelImp.start(ChannelImp.java:96) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	at org.fisco.bcos.sdk.BcosSDK.<init>(BcosSDK.java:75) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	... 57 more
+Caused by: org.fisco.bcos.sdk.network.NetworkException: org.fisco.bcos.sdk.network.NetworkException: 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+<==== STEP1 Result: try to connect nodes with ecdsa context failed for cert missing
+* Missed certificates: [resources/conf/ca.crt,resources/conf/sdk.crt,resources/conf/sdk.key,]
+currentPath: /home/hirasawa/weid-build-tools
+
+----------------------------
+====> STEP2: connect nodes with ecdsa context failed, try to connect nodes with sm-context...
+<==== STEP2 Result: connect with sm context failed for cert missing.
+* Missed certificates: 
+[resources/conf/gm/gmca.crt,resources/conf/gm/gmsdk.crt,resources/conf/gm/gmsdk.key,resources/conf/gm/gmensdk.key,resources/conf/gm/gmensdk.crt,]
+currentPath: /home/hirasawa/weid-build-tools
+----------------------------
+<====> Error: try to connect nodes with both ecdsa and sm context failed <====>
+<====>[1;31m Please refer to github issue: https://github.com/FISCO-BCOS/java-sdk/issues/536 [0m
+<====>[1;31m Please refer to fisco-docs: https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/faq/connect.html [0m
+----------------------------
+* FISCO BCOS Java SDK Version: 2.9.1
+* Support secp256k1 : true
+* Java Version : 11.0.22
+* JDK Disabled NamedCurves : null
+* JDK DisableNative Option : null
+* OS Name : Linux
+* OS Arch : amd64
+* OS Version : 5.15.146.1-microsoft-standard-WSL2
+* JVM Version : 11.0.22+7-post-Ubuntu-0ubuntu220.04.1
+* JVM Vendor : Ubuntu
+* JVM Vendor URL : https://ubuntu.com/
+
+
+	at org.fisco.bcos.sdk.network.NetworkImp.start(NetworkImp.java:268) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	at org.fisco.bcos.sdk.channel.ChannelImp.start(ChannelImp.java:89) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	at org.fisco.bcos.sdk.BcosSDK.<init>(BcosSDK.java:75) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	... 57 more
+Caused by: org.fisco.bcos.sdk.network.NetworkException: 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+<==== STEP1 Result: try to connect nodes with ecdsa context failed for cert missing
+* Missed certificates: [resources/conf/ca.crt,resources/conf/sdk.crt,resources/conf/sdk.key,]
+currentPath: /home/hirasawa/weid-build-tools
+
+----------------------------
+====> STEP2: connect nodes with ecdsa context failed, try to connect nodes with sm-context...
+<==== STEP2 Result: connect with sm context failed for cert missing.
+* Missed certificates: 
+[resources/conf/gm/gmca.crt,resources/conf/gm/gmsdk.crt,resources/conf/gm/gmsdk.key,resources/conf/gm/gmensdk.key,resources/conf/gm/gmensdk.crt,]
+currentPath: /home/hirasawa/weid-build-tools
+----------------------------
+<====> Error: try to connect nodes with both ecdsa and sm context failed <====>
+<====>[1;31m Please refer to github issue: https://github.com/FISCO-BCOS/java-sdk/issues/536 [0m
+<====>[1;31m Please refer to fisco-docs: https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/faq/connect.html [0m
+----------------------------
+* FISCO BCOS Java SDK Version: 2.9.1
+* Support secp256k1 : true
+* Java Version : 11.0.22
+* JDK Disabled NamedCurves : null
+* JDK DisableNative Option : null
+* OS Name : Linux
+* OS Arch : amd64
+* OS Version : 5.15.146.1-microsoft-standard-WSL2
+* JVM Version : 11.0.22+7-post-Ubuntu-0ubuntu220.04.1
+* JVM Vendor : Ubuntu
+* JVM Vendor URL : https://ubuntu.com/
+
+
+	at org.fisco.bcos.sdk.network.NetworkImp.start(NetworkImp.java:232) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	at org.fisco.bcos.sdk.channel.ChannelImp.start(ChannelImp.java:89) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	at org.fisco.bcos.sdk.BcosSDK.<init>(BcosSDK.java:75) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	... 57 more
+2024-04-24 23:40:28.811 [http-nio-6021-exec-9] ERROR ConfigService() - [checkNode] checkNode with fail.
+2024-04-24 23:47:29.982 [http-nio-6021-exec-10] ERROR ChannelImp() - ====> init channel network error, org.fisco.bcos.sdk.network.NetworkException: 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+<==== STEP1 Result: try to connect nodes with ecdsa context failed for cert missing
+* Missed certificates: [resources/conf/ca.crt,resources/conf/sdk.crt,resources/conf/sdk.key,]
+currentPath: /home/hirasawa/weid-build-tools
+
+----------------------------
+====> STEP2: connect nodes with ecdsa context failed, try to connect nodes with sm-context...
+<==== STEP2 Result: connect with sm context failed for cert missing.
+* Missed certificates: 
+[resources/conf/gm/gmca.crt,resources/conf/gm/gmsdk.crt,resources/conf/gm/gmsdk.key,resources/conf/gm/gmensdk.key,resources/conf/gm/gmensdk.crt,]
+currentPath: /home/hirasawa/weid-build-tools
+----------------------------
+<====> Error: try to connect nodes with both ecdsa and sm context failed <====>
+<====>[1;31m Please refer to github issue: https://github.com/FISCO-BCOS/java-sdk/issues/536 [0m
+<====>[1;31m Please refer to fisco-docs: https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/faq/connect.html [0m
+----------------------------
+* FISCO BCOS Java SDK Version: 2.9.1
+* Support secp256k1 : true
+* Java Version : 11.0.22
+* JDK Disabled NamedCurves : null
+* JDK DisableNative Option : null
+* OS Name : Linux
+* OS Arch : amd64
+* OS Version : 5.15.146.1-microsoft-standard-WSL2
+* JVM Version : 11.0.22+7-post-Ubuntu-0ubuntu220.04.1
+* JVM Vendor : Ubuntu
+* JVM Vendor URL : https://ubuntu.com/
+
+ 
+2024-04-24 23:47:29.982 [http-nio-6021-exec-10] ERROR CheckNodeServiceV2() - [check] check the node fail.
+org.fisco.bcos.sdk.BcosSDKException: create BcosSDK failed, error info: init channel network error!
+org.fisco.bcos.sdk.network.NetworkException: 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+<==== STEP1 Result: try to connect nodes with ecdsa context failed for cert missing
+* Missed certificates: [resources/conf/ca.crt,resources/conf/sdk.crt,resources/conf/sdk.key,]
+currentPath: /home/hirasawa/weid-build-tools
+
+----------------------------
+====> STEP2: connect nodes with ecdsa context failed, try to connect nodes with sm-context...
+<==== STEP2 Result: connect with sm context failed for cert missing.
+* Missed certificates: 
+[resources/conf/gm/gmca.crt,resources/conf/gm/gmsdk.crt,resources/conf/gm/gmsdk.key,resources/conf/gm/gmensdk.key,resources/conf/gm/gmensdk.crt,]
+currentPath: /home/hirasawa/weid-build-tools
+----------------------------
+<====> Error: try to connect nodes with both ecdsa and sm context failed <====>
+<====>[1;31m Please refer to github issue: https://github.com/FISCO-BCOS/java-sdk/issues/536 [0m
+<====>[1;31m Please refer to fisco-docs: https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/faq/connect.html [0m
+----------------------------
+* FISCO BCOS Java SDK Version: 2.9.1
+* Support secp256k1 : true
+* Java Version : 11.0.22
+* JDK Disabled NamedCurves : null
+* JDK DisableNative Option : null
+* OS Name : Linux
+* OS Arch : amd64
+* OS Version : 5.15.146.1-microsoft-standard-WSL2
+* JVM Version : 11.0.22+7-post-Ubuntu-0ubuntu220.04.1
+* JVM Vendor : Ubuntu
+* JVM Vendor URL : https://ubuntu.com/
+
+
+	at org.fisco.bcos.sdk.BcosSDK.<init>(BcosSDK.java:108) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	at com.webank.weid.service.v2.CheckNodeServiceV2.buildBcosSDK(CheckNodeServiceV2.java:70) ~[weid-build-tools-3.1.1-rc.1.jar:?]
+	at com.webank.weid.service.v2.CheckNodeServiceV2.check(CheckNodeServiceV2.java:42) [weid-build-tools-3.1.1-rc.1.jar:?]
+	at com.webank.weid.service.ConfigService.checkNode(ConfigService.java:546) [weid-build-tools-3.1.1-rc.1.jar:?]
+	at com.webank.weid.controller.ConfigurationController.checkNode(ConfigurationController.java:177) [weid-build-tools-3.1.1-rc.1.jar:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) [spring-web-5.3.25.jar:5.3.25]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) [spring-web-5.3.25.jar:5.3.25]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) [spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) [spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) [spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) [spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061) [spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961) [spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.3.2.jar:5.3.2]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.3.2.jar:5.3.2]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) [tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.3.2.jar:5.3.2]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [tomcat-embed-core-9.0.41.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at com.webank.weid.filter.XssFilter.doFilter(XssFilter.java:29) [weid-build-tools-3.1.1-rc.1.jar:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.3.25.jar:5.3.25]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.25.jar:5.3.25]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.3.25.jar:5.3.25]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.25.jar:5.3.25]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.3.25.jar:5.3.25]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.25.jar:5.3.25]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+Caused by: io.netty.channel.ChannelException: init channel network error!
+org.fisco.bcos.sdk.network.NetworkException: 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+<==== STEP1 Result: try to connect nodes with ecdsa context failed for cert missing
+* Missed certificates: [resources/conf/ca.crt,resources/conf/sdk.crt,resources/conf/sdk.key,]
+currentPath: /home/hirasawa/weid-build-tools
+
+----------------------------
+====> STEP2: connect nodes with ecdsa context failed, try to connect nodes with sm-context...
+<==== STEP2 Result: connect with sm context failed for cert missing.
+* Missed certificates: 
+[resources/conf/gm/gmca.crt,resources/conf/gm/gmsdk.crt,resources/conf/gm/gmsdk.key,resources/conf/gm/gmensdk.key,resources/conf/gm/gmensdk.crt,]
+currentPath: /home/hirasawa/weid-build-tools
+----------------------------
+<====> Error: try to connect nodes with both ecdsa and sm context failed <====>
+<====>[1;31m Please refer to github issue: https://github.com/FISCO-BCOS/java-sdk/issues/536 [0m
+<====>[1;31m Please refer to fisco-docs: https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/faq/connect.html [0m
+----------------------------
+* FISCO BCOS Java SDK Version: 2.9.1
+* Support secp256k1 : true
+* Java Version : 11.0.22
+* JDK Disabled NamedCurves : null
+* JDK DisableNative Option : null
+* OS Name : Linux
+* OS Arch : amd64
+* OS Version : 5.15.146.1-microsoft-standard-WSL2
+* JVM Version : 11.0.22+7-post-Ubuntu-0ubuntu220.04.1
+* JVM Vendor : Ubuntu
+* JVM Vendor URL : https://ubuntu.com/
+
+
+	at org.fisco.bcos.sdk.channel.ChannelImp.start(ChannelImp.java:96) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	at org.fisco.bcos.sdk.BcosSDK.<init>(BcosSDK.java:75) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	... 57 more
+Caused by: org.fisco.bcos.sdk.network.NetworkException: org.fisco.bcos.sdk.network.NetworkException: 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+<==== STEP1 Result: try to connect nodes with ecdsa context failed for cert missing
+* Missed certificates: [resources/conf/ca.crt,resources/conf/sdk.crt,resources/conf/sdk.key,]
+currentPath: /home/hirasawa/weid-build-tools
+
+----------------------------
+====> STEP2: connect nodes with ecdsa context failed, try to connect nodes with sm-context...
+<==== STEP2 Result: connect with sm context failed for cert missing.
+* Missed certificates: 
+[resources/conf/gm/gmca.crt,resources/conf/gm/gmsdk.crt,resources/conf/gm/gmsdk.key,resources/conf/gm/gmensdk.key,resources/conf/gm/gmensdk.crt,]
+currentPath: /home/hirasawa/weid-build-tools
+----------------------------
+<====> Error: try to connect nodes with both ecdsa and sm context failed <====>
+<====>[1;31m Please refer to github issue: https://github.com/FISCO-BCOS/java-sdk/issues/536 [0m
+<====>[1;31m Please refer to fisco-docs: https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/faq/connect.html [0m
+----------------------------
+* FISCO BCOS Java SDK Version: 2.9.1
+* Support secp256k1 : true
+* Java Version : 11.0.22
+* JDK Disabled NamedCurves : null
+* JDK DisableNative Option : null
+* OS Name : Linux
+* OS Arch : amd64
+* OS Version : 5.15.146.1-microsoft-standard-WSL2
+* JVM Version : 11.0.22+7-post-Ubuntu-0ubuntu220.04.1
+* JVM Vendor : Ubuntu
+* JVM Vendor URL : https://ubuntu.com/
+
+
+	at org.fisco.bcos.sdk.network.NetworkImp.start(NetworkImp.java:268) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	at org.fisco.bcos.sdk.channel.ChannelImp.start(ChannelImp.java:89) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	at org.fisco.bcos.sdk.BcosSDK.<init>(BcosSDK.java:75) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	... 57 more
+Caused by: org.fisco.bcos.sdk.network.NetworkException: 
+* TRACE INFORMATION:
+----------------------------
+====> STEP1: try to connect nodes with ecdsa context...
+<==== STEP1 Result: try to connect nodes with ecdsa context failed for cert missing
+* Missed certificates: [resources/conf/ca.crt,resources/conf/sdk.crt,resources/conf/sdk.key,]
+currentPath: /home/hirasawa/weid-build-tools
+
+----------------------------
+====> STEP2: connect nodes with ecdsa context failed, try to connect nodes with sm-context...
+<==== STEP2 Result: connect with sm context failed for cert missing.
+* Missed certificates: 
+[resources/conf/gm/gmca.crt,resources/conf/gm/gmsdk.crt,resources/conf/gm/gmsdk.key,resources/conf/gm/gmensdk.key,resources/conf/gm/gmensdk.crt,]
+currentPath: /home/hirasawa/weid-build-tools
+----------------------------
+<====> Error: try to connect nodes with both ecdsa and sm context failed <====>
+<====>[1;31m Please refer to github issue: https://github.com/FISCO-BCOS/java-sdk/issues/536 [0m
+<====>[1;31m Please refer to fisco-docs: https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/faq/connect.html [0m
+----------------------------
+* FISCO BCOS Java SDK Version: 2.9.1
+* Support secp256k1 : true
+* Java Version : 11.0.22
+* JDK Disabled NamedCurves : null
+* JDK DisableNative Option : null
+* OS Name : Linux
+* OS Arch : amd64
+* OS Version : 5.15.146.1-microsoft-standard-WSL2
+* JVM Version : 11.0.22+7-post-Ubuntu-0ubuntu220.04.1
+* JVM Vendor : Ubuntu
+* JVM Vendor URL : https://ubuntu.com/
+
+
+	at org.fisco.bcos.sdk.network.NetworkImp.start(NetworkImp.java:232) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	at org.fisco.bcos.sdk.channel.ChannelImp.start(ChannelImp.java:89) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	at org.fisco.bcos.sdk.BcosSDK.<init>(BcosSDK.java:75) ~[fisco-bcos-java-sdk-2.9.3-SNAPSHOT.jar:?]
+	... 57 more
+2024-04-24 23:47:29.983 [http-nio-6021-exec-10] ERROR ConfigService() - [checkNode] checkNode with fail.

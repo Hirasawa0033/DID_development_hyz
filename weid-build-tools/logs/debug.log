@@ -1,0 +1,30 @@
+2024-04-25 10:34:41.242 [main] INFO  BuildToolApplication() - Starting BuildToolApplication using Java 11.0.22 on Hirasawa007 with PID 1328 (/home/hirasawa/weid-build-tools/dist/app/weid-build-tools-3.1.1-rc.1.jar started by hirasawa in /home/hirasawa/weid-build-tools)
+2024-04-25 10:34:41.251 [main] INFO  BuildToolApplication() - No active profile set, falling back to default profiles: default
+2024-04-25 10:34:41.853 [main] INFO  TomcatWebServer() - Tomcat initialized with port(s): 6021 (http)
+2024-04-25 10:34:41.859 [main] INFO  Http11NioProtocol() - Initializing ProtocolHandler ["http-nio-6021"]
+2024-04-25 10:34:41.860 [main] INFO  StandardService() - Starting service [Tomcat]
+2024-04-25 10:34:41.860 [main] INFO  StandardEngine() - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2024-04-25 10:34:41.922 [main] INFO  [/]() - Initializing Spring embedded WebApplicationContext
+2024-04-25 10:34:41.923 [main] INFO  ServletWebServerApplicationContext() - Root WebApplicationContext: initialization completed in 645 ms
+2024-04-25 10:34:42.349 [main] INFO  Http11NioProtocol() - Starting ProtocolHandler ["http-nio-6021"]
+2024-04-25 10:34:42.365 [main] INFO  TomcatWebServer() - Tomcat started on port(s): 6021 (http) with context path ''
+2024-04-25 10:34:42.370 [main] INFO  BuildToolApplication() - Started BuildToolApplication in 1.329 seconds (JVM running for 2.042)
+2024-04-25 10:51:03.755 [main] INFO  BuildToolApplication() - Starting BuildToolApplication using Java 11.0.22 on Hirasawa007 with PID 5062 (/home/hirasawa/weid-build-tools/dist/app/weid-build-tools-3.1.1-rc.1.jar started by hirasawa in /home/hirasawa/weid-build-tools)
+2024-04-25 10:51:03.761 [main] INFO  BuildToolApplication() - No active profile set, falling back to default profiles: default
+2024-04-25 10:51:04.236 [main] INFO  TomcatWebServer() - Tomcat initialized with port(s): 6021 (http)
+2024-04-25 10:51:04.242 [main] INFO  Http11NioProtocol() - Initializing ProtocolHandler ["http-nio-6021"]
+2024-04-25 10:51:04.242 [main] INFO  StandardService() - Starting service [Tomcat]
+2024-04-25 10:51:04.242 [main] INFO  StandardEngine() - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2024-04-25 10:51:04.293 [main] INFO  [/]() - Initializing Spring embedded WebApplicationContext
+2024-04-25 10:51:04.293 [main] INFO  ServletWebServerApplicationContext() - Root WebApplicationContext: initialization completed in 514 ms
+2024-04-25 10:51:04.626 [main] INFO  Http11NioProtocol() - Starting ProtocolHandler ["http-nio-6021"]
+2024-04-25 10:51:04.635 [main] INFO  TomcatWebServer() - Tomcat started on port(s): 6021 (http) with context path ''
+2024-04-25 10:51:04.640 [main] INFO  BuildToolApplication() - Started BuildToolApplication in 1.041 seconds (JVM running for 1.399)
+2024-04-25 10:55:40.440 [http-nio-6021-exec-1] INFO  [/]() - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-25 10:55:40.440 [http-nio-6021-exec-1] INFO  DispatcherServlet() - Initializing Servlet 'dispatcherServlet'
+2024-04-25 10:55:40.441 [http-nio-6021-exec-1] INFO  DispatcherServlet() - Completed initialization in 1 ms
+2024-04-25 10:55:40.652 [http-nio-6021-exec-9] INFO  GuideController() - start getGuideStatus.
+2024-04-25 10:55:42.619 [http-nio-6021-exec-1] INFO  ConfigurationController() - start getRole.
+2024-04-25 10:55:43.772 [http-nio-6021-exec-6] INFO  GuideController() - start setRole. roleType:1
+2024-04-25 10:55:43.818 [http-nio-6021-exec-9] INFO  ConfigurationController() - start loadConfig.
+2024-04-25 10:55:43.818 [http-nio-6021-exec-9] INFO  ConfigService() - [loadConfig] begin load the run.config
